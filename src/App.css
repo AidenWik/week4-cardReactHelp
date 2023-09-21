@@ -9,42 +9,144 @@
 .color {
   background-color: red;
 }
-body {
-  background-color: lightgreen;
-  
+.card-wrapper {
+  display:inline-block;
+  max-width: 400px; /* Set the maximum width of the card */
+  width: 100%; /* Make the card responsive within the parent container */
+  padding: 20px; /* Add padding for spacing */
+  border: 1px solid #ccc;
+  text-align: center;
+  position: relative;
+  margin-bottom: 200px;
 }
-.card { 
-  border-style: solid;
-  border-width: 3px;
-  border-color: green;
-  border-radius: 10px;
-  width: 450px;
+
+.card-wrapper img {
+  width: 100%; /* Set the width of the image to 100% to fit the card width */
+  max-height: 300px; /* Set a fixed maximum height for the image */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire image area */
 }
-img {
-  margin: 25px;
-  width: 400px;
-  height: auto;
+
+/* Media query to scale the card on screens smaller than 500px */
+@media (max-width: 500px) {
+  .card-wrapper {
+      max-width: 100%; /* Expand the card to the full width of the viewport */
+      padding: 10px; /* Adjust padding for smaller screens if needed */
+  }
 }
+
+.Sheetz label{ 
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; 
+  margin: 0; 
+font-size: 50px;
+color: white;
+background: red;
+}
+.directions label{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; 
+  margin: 0;
+color: Black;
+}
+.Favorites label{
+display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0;
+font-size: 30px;
+color: white;
+background: black;
+}
+
 .btn-wrapper {
-  margin: 24px;
+display: flex;
+  justify-content: center;
+  align-items: center; 
+margin: 24px auto;
 }
 .btn-wrapper button {
-  font-size: 24px;
-  color: green;
-  background-color: white;
+font-size: 40px;
+color: blue;
+background-color: white;
 }
 .btn-wrapper button:hover {
+color: white;
+background-color: blue;
+}
+.images {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.images img {
+height: auto; 
+max-width: 30%; 
+}
+
+.paragraphs {
+display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.paragraphs p1 {
+/* Styles for the first paragraph */
+padding-right: 20px;
+padding-bottom: 20px;
+}
+.paragraphs p2 {
+padding-right: 20px;
+padding-bottom: 20px;
+}
+.paragraphs p3 {
+padding-right: 20px;
+padding-bottom: 20px;
+}
+.card-wrapper .detailsBtn button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: blue;
+  cursor: pointer;
   color: white;
-  background-color: green;
 }
-.header {
-  font-size: 20px;
-  margin: 25px;
+
+.detailsBtn button:hover {
+  color: blue;
+  background-color: white;
 }
-.paragraph {
-  font-size: 20px;
-  margin: 25px;
+
+.duper button{
+color: white;
+background-color: blue;
 }
+.duper button:focus  {
+color: blue;
+  background-color: white;
+}
+/* Show the details button between 500px and 800px */
+@media (max-width: 800px) {
+  .detailsBtn button {
+      display: none;
+  }
+}
+
+.card-wrapper.alt-bg {
+  background-color: lightblue;
+}
+.card-wrapper.alt-bg2 {
+  background-color: lightgreen;
+}
+.hidden {
+          display: none;
+      }
+    
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
